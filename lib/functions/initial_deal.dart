@@ -22,9 +22,5 @@ print(dealerHand); // Should print [2, 4]
 import 'draw_card.dart';
 
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
-
- playerHand.add(DrawCard(deck));
- houseHand.add(DrawCard(deck));
- playerHand.add(DrawCard(deck));
- houseHand.add(DrawCard(deck));
+ return DrawCard(playerHand, houseHand);
 }
