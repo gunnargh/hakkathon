@@ -1,3 +1,5 @@
+import 'package:BlackJack/functions/check_if_busted.dart';
+
 import 'functions/score_function.dart';
 import 'functions/card_namer.dart';
 import 'functions/deal_card.dart';
@@ -20,9 +22,14 @@ show the score of the house.
 
 void HousePlays(List<int> houseHand, List<int> deck){
 
-  int houseSum;
-  print(houseHand);
-  houseSum = houseHand.sum;
-  print(houseSum);
-
+  while(CalculateScore(houseHand) < 17){
+    int houseCard = DealCard(deck);
+    if(CheckIfBusted(houseHand)){
+      houseHand.add(houseCard);
+      print('House draws ${CardNamer(houseCard)}');
+    } else if(CalculateScore(houseHand) >= 17){
+      print('House lost');
+      break;
+    }
+  }
 }
