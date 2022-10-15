@@ -22,8 +22,33 @@ gets the score 1. So if the method gets the hand [1, 1] the score would be 12
 
  */
 
-
+import 'dart:html';
 
 int CalculateScore(List<int> hand){
 
+//this calculates the score of the hand.
+  int CalculateScore(List<int> hand) {
+    int score = 0;
+    bool aceHasBeenSeen = false;
+    for(int card in hand){
+      print('Card is $card');
+      if(card >= 10) {
+        score += 10;
+      } else {
+        if(card > 1) {
+          // Score if card is not ace
+          score += card;
+        } else {
+          // Score if card is ace
+          if(aceHasBeenSeen == false) {
+            score += 11;
+            aceHasBeenSeen = true;
+          } else {
+            score += 1;
+          }
+          }
+        }
+      }
+    return score;
+    }
 }
