@@ -21,12 +21,12 @@ he doesn't input a integer?
 int PlaceBet(int bankRoll) {
 
   print("how much u wanna bet");
-  bool active = true
+  bool active = true;
   while (active){
   String bet = stdin.readLineSync();
   int result = int.tryParse(bet);
 
-  if (result > bankRoll || result = 0 ) {
+  if (result > bankRoll || result == 0 ) {
     while(result > bankRoll) {
       print("thats to much");
       print("how much u wanna bet");
