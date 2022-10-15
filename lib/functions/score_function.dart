@@ -19,36 +19,31 @@ gets the score 1. So if the method gets the hand [1, 1] the score would be 12
   hand = [1, 1, 1, 1] -> Score 14
   hand = [11, 13] -> Score 20
   hand = [7, 1] -> Score 18
+*/
 
- */
+int CalculateScore(List<int> hand) {
+  int score = 0;
+  bool ifAce = false;
 
-import 'dart:html';
-
-int CalculateScore(List<int> hand){
-
-//this calculates the score of the hand.
-  int CalculateScore(List<int> hand) {
-    int score = 0;
-    bool aceHasBeenSeen = false;
-    for(int card in hand){
-      print('Card is $card');
-      if(card >= 10) {
-        score += 10;
-      } else {
-        if(card > 1) {
-          // Score if card is not ace
-          score += card;
-        } else {
-          // Score if card is ace
-          if(aceHasBeenSeen == false) {
-            score += 11;
-            aceHasBeenSeen = true;
-          } else {
-            score += 1;
-          }
-          }
-        }
-      }
-    return score;
+  for(int idx=0; idx<hand.length; idx++) {
+    if(hand[idx] == 1) {
+      ifAce = true;
+      score += hand[idx];
+    } else if (hand[idx] == 11) {
+      score += score + hand[idx]-1;
+    } else if (hand[idx] == 12) {
+      score = score + hand[idx]-2;
+    } else if (hand[idx] == 13) {
+      score = score + hand[idx]-3;
+    } else {
+      score += hand[idx];
     }
+  }
+  if(ifAce) {
+    score += 10;
+  }
+  return score;
 }
+
+
+
