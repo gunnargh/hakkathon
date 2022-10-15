@@ -24,14 +24,14 @@ int PlaceBet(int bankRoll) {
   if (bet > buyIn) {
     print("thats to much")
     int result = int.tryParse(bet);
-    int return result
+    return result;
   }
-
+}
 
   int BuyIn() {
     print("how much buy in ??");
     String buyIn = stdin.readLineSync();
    int  result = int.tryParse(buyIn);
-    int return result
+   return result;
   }
 }
