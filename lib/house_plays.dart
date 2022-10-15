@@ -1,6 +1,7 @@
 import 'functions/score_function.dart';
 import 'functions/card_namer.dart';
 import 'functions/deal_card.dart';
+import 'package:collection/collection.dart';
 
 /*
 Once the player is done with his turn (HitOrStay) the house will play.
@@ -18,5 +19,10 @@ show the score of the house.
  */
 
 void HousePlays(List<int> houseHand, List<int> deck){
+
+  int houseSum;
+  print(houseHand);
+  houseSum = houseHand.sum;
+  print(houseSum);
 
 }
