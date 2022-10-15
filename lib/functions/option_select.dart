@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 /*
 Create a function called OptionSelect which takes in a list of options,
@@ -18,17 +19,18 @@ that the function will simply ask the user again to input an answer?
 
  */
 
-int OptionSelect(String statement, List<String> options){
-List<String> options = ['hit', 'stay'];
-bool trueorfalse = true
-while(true){
-print("hit or stay")}
-String input = stdin.readLineSync(encoding: Encoding.getByname("UTF-8"));
+int OptionSelect(String statement, List<String> options) {
+  List<String> options = ['hit', 'stay'];
+  bool trueorfalse = true;
+  while (trueorfalse) {
+    print(statement);
 
-for(int i = 0; i <options.lenght ; i++){
-int result = 0;
+    for (int i = 0; i < options.length; i++) {
+      print("${i + 1 } ${options[i]}");
+    }
 
-
-
-
+    String input = stdin.readLineSync(encoding: Encoding.getByName("UTF-8"));
+    result = int.tryParse(input);
+    return result;
+  }
 }
