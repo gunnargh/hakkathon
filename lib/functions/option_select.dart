@@ -30,7 +30,7 @@ int OptionSelect(String statement, List<String> options) {
     }
 
     String input = stdin.readLineSync(encoding: Encoding.getByName("UTF-8"));
-    result = int.tryParse(input);
+    int result = int.tryParse(input);
     return result;
   }
 }
