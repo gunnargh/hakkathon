@@ -12,4 +12,3 @@ String CardNamer(int i){
       ,'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King',];
     return cardName[i-1];
   }
-}
