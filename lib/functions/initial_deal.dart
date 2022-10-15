@@ -22,7 +22,9 @@ Added to make it work
 
 import 'draw_card.dart';
 
-void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
+void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck) {
+ DrawCard(playerHand, deck);
+ DrawCard(houseHand, deck);
  DrawCard(playerHand, deck);
  DrawCard(houseHand, deck);
 }
