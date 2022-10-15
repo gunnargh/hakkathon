@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'functions/status.dart';
 import 'functions/card_namer.dart';
 import 'functions/deal_card.dart';
@@ -22,5 +24,23 @@ If he busts after drawing this card, break the loop as well.
  */
 
 void HitOrStay(List<int> playerHand, List<int> houseHand, List<int> deck){
+List<String> options = ['Hit', 'Stay', 'Quit'];
 
+while(true) {
+  int userOptionSelect = OptionSelect('Do you want to Hit, Stay or Quit?', options);
+  if(userOptionSelect==1) {
+    int myCard = DealCard(deck);
+    print('Your card is ${CardNamer(myCard)}');
+    playerHand.add(myCard);
+    if(CheckIfBusted(playerHand)==true) {
+      print('You Lose.');
+      break;
+    }
+    Status(playerHand, houseHand);
+  }
+  if(userOptionSelect==3) {
+    print('Goodbye.');
+    exit(0);
+  }
+}
 }
