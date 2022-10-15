@@ -8,6 +8,8 @@ import 'package:BlackJack/functions/welcome.dart';
 void main() {
   Welcome();
 
-  List<int> deck = ShuffledDeck();
-  print(deck);
+List <int> PlaceBet =[100];
+List <int> bankRoll = [200];
+
+money_grab(PlaceBet,bankRoll);
 }
