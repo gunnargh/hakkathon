@@ -18,10 +18,20 @@ Can you design the function such that it will ask the user again if
 he doesn't input a integer?
  */
 
-int PlaceBet(int bankRoll){
+int PlaceBet(int bankRoll) {
+  print("how much u wanna bet");
+  String bet = stdin.readLineSync();
+  if (bet > buyIn) {
+    print("thats to much")
+    result = int.tryParse(bet);
+    int return bet
+  }
 
-}
 
-int BuyIn(){
-
+  int BuyIn() {
+    print("how much buy in ??");
+    String buyIn = stdin.readLineSync();
+    result = int.tryParse(buyIn);
+    int return buyIn
+  }
 }
