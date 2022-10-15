@@ -19,4 +19,6 @@ show the score of the house.
 
 void HousePlays(List<int> houseHand, List<int> deck){
 
+  print(houseHand);
+
 }
