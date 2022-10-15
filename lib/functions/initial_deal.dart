@@ -23,6 +23,8 @@ import 'draw_card.dart';
 
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
 
- playerHand = playerHand.add(DrawCard(deck));
- houseHand = houseHand.add(DrawCard(deck));
+ playerHand.add(DrawCard(deck));
+ houseHand.add(DrawCard(deck));
+ playerHand.add(DrawCard(deck));
+ houseHand.add(DrawCard(deck));
 }
