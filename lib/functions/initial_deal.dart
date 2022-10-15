@@ -23,10 +23,6 @@ import 'draw_card.dart';
 
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
 
-  int playerHand;
-  int houseHand;
-  playerHand.add(draw_card(deck));
-
-  //adding things to commit
-
+ playerHand = playerHand.add(DrawCard(deck));
+ houseHand = houseHand.add(DrawCard(deck));
 }
