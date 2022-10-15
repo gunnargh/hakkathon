@@ -6,10 +6,7 @@ it should return the name of the corresponding card (Ignore the suit)
  */
 
 String CardNamer(int i){
-
   List<String> cardName = ['Ace', 'Two', 'Three', 'Four','Five', 'Six'
-    ,'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King',];
-  return cardName[i-1];
-}
-
-}
+      ,'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King',];
+    return cardName[i-1];
+  }

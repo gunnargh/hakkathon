@@ -9,5 +9,7 @@ And when run, returns a shuffled deck of cards. No inputs, only output.
  */
 
 List<int> ShuffledDeck(){
+ List <int> myList= DeckOfCards() ;
+  return Shuffler(myList);
 
 }
