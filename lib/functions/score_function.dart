@@ -36,7 +36,7 @@ int CalculateScore(List<int> hand) {
     }
   }
   if(ifAce) {
-    score += 10;
+    score += 1;
   }
   return score;
 }
