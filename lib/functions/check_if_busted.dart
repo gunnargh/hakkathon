@@ -26,8 +26,8 @@ print(CalculateScore(hand));
 int score = CalculateScore(hand);
 
     if(score>21){
-      print("true");
+      return true;
     } else{
-      print("false");
+      return false;
     }
 }
