@@ -13,7 +13,9 @@ print(hand); // Should print []
 
 
 void ReturnHand(List<int> hand, List<int> deck){
-
+  List<int> deck = [3, 4, 5, 6];
+  List<int> hand= [];
+  ReturnHand(hand, deck);
 }
 
 /*

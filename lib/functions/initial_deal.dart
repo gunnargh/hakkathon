@@ -1,5 +1,3 @@
-import 'draw_card.dart';
-
 /*
 Create a function called InitialDeal. This function should accept THREE lists
 of integers as an input: playerHand, dealerHand, deck
@@ -19,9 +17,16 @@ InitialDeal(playerHand, dealerHand, deck);
 print(deck); // Should print [5, 6]
 print(playerHand); // Should print [1, 3]
 print(dealerHand); // Should print [2, 4]
-
  */
 
+import 'draw_card.dart';
+
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
+
+  int playerHand;
+  int houseHand;
+  playerHand.add(draw_card(deck));
+
+  //adding things to commit
 
 }
