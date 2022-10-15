@@ -3,7 +3,6 @@ import 'package:BlackJack/functions/check_if_busted.dart';
 import 'functions/score_function.dart';
 import 'functions/card_namer.dart';
 import 'functions/deal_card.dart';
-import 'package:collection/collection.dart';
 
 /*
 Once the player is done with his turn (HitOrStay) the house will play.
