@@ -24,11 +24,13 @@ void HousePlays(List<int> houseHand, List<int> deck){
 
   while(CalculateScore(houseHand) < 17){
     int houseCard = DealCard(deck);
+    houseHand.add(houseCard);
+    print('House score is now ${CalculateScore(houseHand)}');
     if(CheckIfBusted(houseHand)){
-      houseHand.add(houseCard);
       print('House draws ${CardNamer(houseCard)}');
+      print('House score is now ${CalculateScore(houseHand)}');
     } else if(CalculateScore(houseHand) >= 17){
-      print('House lost');
+      print('House lost with ${CalculateScore(houseHand)}');
       break;
     }
   }
