@@ -20,9 +20,6 @@ Example inputs
 
 
 bool CheckIfBusted(List<int> hand){
-print(hand);
-print(CalculateScore(hand));
-
 int score = CalculateScore(hand);
 
     if(score>21){
