@@ -27,7 +27,7 @@ void HitOrStay(List<int> playerHand, List<int> houseHand, List<int> deck){
 List<String> options = ['Hit', 'Stay', 'Quit'];
 
 while(true) {
-  int userOptionSelect = OptionSelect('Do you want to Hit, Stay or Quit?', options);
+  int userOptionSelect = OptionSelect('Do you want to Hit or Stay?', options);
   if(userOptionSelect==1) {
     int myCard = DealCard(deck);
     print('Your card is ${CardNamer(myCard)}');
@@ -38,8 +38,8 @@ while(true) {
     }
     Status(playerHand, houseHand);
   }
-  if(userOptionSelect==3) {
-    print('Goodbye.');
+  if(userOptionSelect==2) {
+    print('You stay');
     exit(0);
   }
 }
