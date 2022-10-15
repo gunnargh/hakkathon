@@ -26,17 +26,17 @@ int CalculateScore(List<int> hand) {
   bool ifAce = false;
 
   for(int idx=0; idx<hand.length; idx++) {
-    if(hand[idx] == 1 && ifAce == false) {
-      ifAce = true;
-      score += 11;
-    } else if (hand[idx] == 11) {
+    if (hand[idx] >= 11 || hand[idx] == 1) {
       score += 10;
-    } else {
+      if (hand[idx] == 1 && ifAce == false) {
+        score += 1;
+        ifAce = true;
+      } else if (hand[idx] == 1 && ifAce == true) {
+        score -= 9;
+      }
+    } else if (hand[idx] < 11){
       score += hand[idx];
     }
-  }
-  if(ifAce) {
-    score += 1;
   }
   return score;
 }
