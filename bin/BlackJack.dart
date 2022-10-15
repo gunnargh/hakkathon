@@ -6,8 +6,7 @@ import 'package:BlackJack/functions/welcome.dart';
  */
 
 void main() {
-  Welcome();
-
-  List<int> deck = ShuffledDeck();
-  print(deck);
+  List <int> playerHand = [2,5];
+  List <int> houseHand = [3,3];
+  Status(playerHand, houseHand);
 }

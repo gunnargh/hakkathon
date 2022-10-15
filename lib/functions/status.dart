@@ -16,8 +16,10 @@ hand before showdown.)
  */
 void Status(List<int> playerHand, List<int> houseHand){
 
-    print('Player\'s hand is ${CardNameList(playerHand)} . His score is ${CalculateScore(playerHand)}.');
-    print('House\'s card is ${CardNamer(houseHand[0])}.');
+    print('Player\'s hand is ${CardNameList(playerHand)} ${CardNamer(houseHand[1])} .'
+        ' His score is ${CalculateScore(playerHand)}.');
+    print('House\'s card is ${CardNamer(houseHand[0])} ${CardNamer(houseHand[1])}. '
+        ' His score is ${CalculateScore(houseHand)}');
   }
   List<String> CardNameList(List<int> playerHand) {
     List<String> names = [];

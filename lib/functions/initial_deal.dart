@@ -19,17 +19,10 @@ print(playerHand); // Should print [1, 3]
 print(dealerHand); // Should print [2, 4]
  */
 
-import 'dart:js_util';
-
 import 'draw_card.dart';
 
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
 
- playerHand = DrawCard(deck);
- houseHand = DrawCard(deck);
-
- playerHand = add(DrawCard(Deck));
- houseHand = add(DrawCard(Deck));
-
-
+ playerHand = playerHand.add(DrawCard(deck));
+ houseHand = houseHand.add(DrawCard(deck));
 }
