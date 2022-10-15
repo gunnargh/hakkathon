@@ -19,19 +19,32 @@ he doesn't input a integer?
  */
 
 int PlaceBet(int bankRoll) {
+
   print("how much u wanna bet");
+  bool active = true
+  while (active){
   String bet = stdin.readLineSync();
-  if (bet > buyIn) {
-    print("thats to much")
-    int result = int.tryParse(bet);
-    return result;
+  int result = int.tryParse(bet);
+
+  if (result > bankRoll || result = 0 ) {
+    while(result > bankRoll) {
+      print("thats to much");
+      print("how much u wanna bet");
+      bet = stdin.readLineSync();
+      result = int.tryParse(bet);
+    }
+   }
+
+    return result - bankRoll;
+
   }
 }
 
-  int BuyIn() {
-    print("how much buy in ??");
-    String buyIn = stdin.readLineSync();
-   int  result = int.tryParse(buyIn);
-   return result;
-  }
+int BuyIn() {
+  print("how much buy in ??");
+  String buyIn = stdin.readLineSync();
+  int result = int.tryParse(buyIn);
+
+
+  return result;
 }
