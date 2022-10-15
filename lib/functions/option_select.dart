@@ -20,7 +20,6 @@ that the function will simply ask the user again to input an answer?
  */
 
 int OptionSelect(String statement, List<String> options) {
-  List<String> options ;
   bool trueorfalse = true;
   while (trueorfalse) {
     print(statement);

@@ -20,7 +20,7 @@ show the score of the house.
  */
 
 void HousePlays(List<int> houseHand, List<int> deck){
-
+  print(houseHand);
   while(CalculateScore(houseHand) < 17){
     int houseCard = DealCard(deck);
     houseHand.add(houseCard);
@@ -28,8 +28,9 @@ void HousePlays(List<int> houseHand, List<int> deck){
     if(CheckIfBusted(houseHand)){
       print('House draws ${CardNamer(houseCard)}');
       print('House score is now ${CalculateScore(houseHand)}');
+      break;
     } else if(CalculateScore(houseHand) >= 17){
-      print('House lost with ${CalculateScore(houseHand)}');
+      print('House has ${CalculateScore(houseHand)}');
       break;
     }
   }
